@@ -1,4 +1,4 @@
-CATALOG_PATH = 'data/catalog/books_with_text_image_embeddings_norm.parquet'
+CATALOG_PATH = 'data/processed/catalog_with_image_paths.parquet'
 TEST_IMAGE_PATH = 'data/test/'
 
 def get_test_image_path(image_number):

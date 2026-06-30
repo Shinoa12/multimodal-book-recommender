@@ -29,8 +29,9 @@ def recommend_visual(query_image_path, catalog_df, k=10):
 
     return recommended_books
 
-catalog_df = load_catalog(CATALOG_PATH)
-test_image_path = get_test_image_path(1)
-visual_recommendations = recommend_visual(test_image_path, catalog_df.copy(), k=5)
+if __name__ == "__main__":
+    catalog_df = load_catalog(CATALOG_PATH)
+    test_image_path = get_test_image_path(1)
+    visual_recommendations = recommend_visual(test_image_path, catalog_df.copy(), k=5)
 
-display_recommendations_text(visual_recommendations)
+    display_recommendations_text(visual_recommendations)

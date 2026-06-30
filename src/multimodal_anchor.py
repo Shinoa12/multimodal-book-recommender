@@ -44,9 +44,10 @@ def recommend_multimodal(query_image_path, catalog_df, k=10, top_m=50, top_n=5, 
     
     return final_candidates_df.sort_values(by='multimodal_score', ascending=False).head(k)
 
-catalog_df = load_catalog(CATALOG_PATH)
-test_image_path = get_test_image_path(1)
+if __name__ == "__main__":
+    catalog_df = load_catalog(CATALOG_PATH)
+    test_image_path = get_test_image_path(1)
 
-multimodal_recommendations = recommend_multimodal(test_image_path, catalog_df.copy(), k=5, top_m=50, top_n=5, alpha=0.7)
+    multimodal_recommendations = recommend_multimodal(test_image_path, catalog_df.copy(), k=5, top_m=50, top_n=5, alpha=0.7)
 
-display_recommendations_text(multimodal_recommendations)
+    display_recommendations_text(multimodal_recommendations)
